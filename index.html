@@ -9,7 +9,7 @@
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #f2f9ff;
-      background-image: url('https://cdn-icons-png.freepik.com/512/2926/2926731.png');
+      background-image: url('https://png.pngtree.com/png-clipart/20210227/ourmid/pngtree-short-legged-dachshund-clip-art-png-image_2971381.jpg');
       background-repeat: repeat;
       background-size: 120px;
       background-attachment: fixed;
@@ -67,8 +67,9 @@
       background: #008ecc;
       padding: 10px;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 15px;
       z-index: 1;
       position: relative;
     }
@@ -77,25 +78,30 @@
       color: white;
       text-decoration: none;
       font-weight: 500;
+      font-size: 1em;
     }
 
     .hero {
       background: url('https://images.unsplash.com/photo-1601831227160-e4e2b4a3d8de') center/cover no-repeat;
-      height: 300px;
+      height: 250px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
-      font-size: 2.5em;
+      font-size: 2em;
       z-index: 1;
       position: relative;
+      text-align: center;
+      padding: 10px;
     }
 
     .offers {
       display: flex;
       justify-content: center;
-      padding: 40px;
+      padding: 40px 20px;
+      flex-wrap: wrap;
+      gap: 30px;
       z-index: 1;
       position: relative;
     }
@@ -105,8 +111,8 @@
       background: white;
       border-radius: 16px;
       overflow: hidden;
-      width: 400px;
-      height: 500px;
+      width: 100%;
+      max-width: 400px;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
       cursor: pointer;
@@ -130,7 +136,7 @@
     .card-content h3 {
       margin-top: 0;
       color: #0077aa;
-      font-size: 1.6em;
+      font-size: 1.4em;
     }
 
     .card-content p {
@@ -151,7 +157,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 30px 20px;
+      padding: 20px;
       text-align: center;
       transition: opacity 0.4s ease;
       box-sizing: border-box;
@@ -163,12 +169,12 @@
 
     .overlay h4 {
       margin: 10px 0 15px;
-      font-size: 1.8em;
+      font-size: 1.5em;
     }
 
     .overlay p {
       margin: 6px 0;
-      font-size: 1.1em;
+      font-size: 1em;
       line-height: 1.5;
     }
 
@@ -181,11 +187,29 @@
       z-index: 1;
       position: relative;
     }
+
+    /* MEDIA QUERY DLA TELEFONÓW */
+    @media (max-width: 600px) {
+      header {
+        font-size: 1.4em;
+        padding: 15px;
+      }
+      .hero {
+        font-size: 1.6em;
+        height: 200px;
+        padding: 10px;
+      }
+      .card-content p, .overlay p {
+        font-size: 0.95em;
+      }
+      .overlay h4 {
+        font-size: 1.2em;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- ANIMOWANE SERDUSZKA W TLE -->
   <div class="hearts-background">
     <div class="heart" style="left: 5%; animation-delay: 0s;"></div>
     <div class="heart" style="left: 20%; animation-delay: 5s;"></div>
@@ -219,10 +243,9 @@
       </div>
       <div class="overlay">
         <h4>Oferta: Praga</h4>
-        <p>📅 Oferta dla par - weekend 27-29.06</p>
+        <p>📅 Oferta dla par - weekend</p>
         <p>🏨 Apartament 4 gwiazdkowy w cenie</p>
         <p>🥐 Codzienne śniadania w cenie</p>
-	<p>💆 Masaż na miejscu przez  Wykfalifikowanego masażyste "Pitera Cutryba" w cenie
         <p>🚌 Dojazd przez prywatnego szofera w cenie</p>
         <p>💶 Cena: 3 buziaki</p>
       </div>
